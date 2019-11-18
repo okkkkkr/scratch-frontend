@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/education/login',
       name: 'login',
-      component: () => import('@/views/Admin/admin.vue')
+      component: () => import('@/views/User/user.vue')
     },
     {
       path: '/education/register',
