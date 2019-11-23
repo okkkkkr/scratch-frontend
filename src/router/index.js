@@ -12,10 +12,12 @@ export default new Router({
       redirect: '/education/login'
     },
     //登录注册
+    
     {
       path: '/education/login',
       name: 'login',
       component: () => import('@/views/User/user.vue')
+      // component: () => import('@/views/Admin/admin.vue')
     },
     {
       path: '/education/register',
@@ -44,37 +46,37 @@ export default new Router({
         
         //班级管理
         {
-          path: 'ClassAssignment',
-          name: 'ClassAssignment',
+          path: 'Assignment',
+          name: 'Assignment',
           component: () => import('@/views/ClassCharge/class-assignment.vue')
         },
         {
-          path: 'BatchRegister',
-          name: 'BatchRegister',
+          path: 'BatchReg',
+          name: 'BatchReg',
           component: () => import('@/views/ClassCharge/batch-register.vue')
         },
 
         //学生管理
         {
-          path: 'StudentInfo',
-          name: 'StudentInfo',
+          path: 'StutInfo',
+          name: 'StuInfo',
           component: () => import('@/views/StudentCharge/student-info.vue')
         },
         {
-          path: 'StudentActive',
-          name: 'StudentActive',
+          path: 'StuActive',
+          name: 'StuActive',
           component: () => import('@/views/StudentCharge/student-active.vue')
         },
         {
-          path: 'StudentPerform',
-          name: 'StudentPerform',
+          path: 'StuPerform',
+          name: 'StuPerform',
           component: () => import('@/views/StudentCharge/student-perform.vue')
         },
 
         //课程管理
         {
-          path: 'ObjectCharge',
-          name: 'ObjectCharge',
+          path: 'ObjCharge',
+          name: 'ObjCharge',
           component: () => import('@/views/ObjectCharge/object-charge.vue')
         },
 

@@ -3,16 +3,6 @@
     <nav class="navbar navbar-expand-lg header-area">
       <a class="navbar-brand" href="/">Upower</a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbar-collapse"
-        aria-controls="navbar-collapse"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >&#9776;</button>
-
       <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">

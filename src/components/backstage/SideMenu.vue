@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="opensiderWrapper">
+      <div :class="[rotate ? 'openWrapper opensiderWrapper' : 'closeWrapper opensiderWrapper']">
       <img
         :class="[rotate ? 'opensider sider' : 'closesider sider']"
         src="../../assets/bars-close.png"
         @click="changeFlag"
       />
-    </div>
+    </div> 
     <el-menu
       default-active="1-4-1"
       class="el-menu-vertical-demo"

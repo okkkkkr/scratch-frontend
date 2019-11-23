@@ -1,27 +1,18 @@
 <template>
   <el-container>
-  <el-header class="Header">
-    <Header></Header>
-  </el-header>
-  <el-container>
-    <el-aside width="200px">
-      <SideMenu></SideMenu>
-    </el-aside>
-    <el-container>
-      <el-main>
-        <router-view></router-view>
-      </el-main>
-    </el-container>
+    <el-header class="Header">
+      <Header></Header>
+    </el-header>
+    <el-main>
+      <router-view></router-view>
+    </el-main>
   </el-container>
-</el-container>
 </template>
 
 <script>
-import SideMenu from "../../components/backstage/SideMenu";
-import Header from "../../components/backstage/TeacherHea";
+import Header from "../../components/backstage/Header";
 export default {
   components: {
-    SideMenu,
     Header
   },
   props: {},

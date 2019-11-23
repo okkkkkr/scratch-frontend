@@ -10,9 +10,6 @@
         <div class="container banner-area">
           <br />
           <br />
-          <br />
-          <br />
-          <br />
           <ul class="slides clearfix">
             <li style="list-style:none;">
               <h1>Upower</h1>
@@ -85,14 +82,13 @@
 
         <div class="container teacher-resoure">
           <div class="row align-items-center">
+            <div class="col-lg-7">
+              <img class="img-fluid" src="../../assets/TeacherResoure.png" alt />
+            </div>
             <div class="col-lg-5">
               <h3>师资力量</h3>
               <br />
               <h5 class="text-center">Upower幼儿编程教育的教师，都来自不通国家的名师，并且对大五人格理论有较为深入的了解，致力于孩子的健康发展。</h5>
-            </div>
-
-            <div class="col-lg-7">
-              <img class="img-fluid" src="../../assets/TeacherResoure.png" alt />
             </div>
           </div>
         </div>
@@ -117,14 +113,15 @@
 
         <div class="container study-plan">
           <div class="row align-items-center">
+            
+
+            <div class="col-lg-7">
+              <img class="img-fluid" src="../../assets/StudyPlan.png" alt />
+            </div>
             <div class="col-lg-5">
               <h3>学习计划</h3>
               <br />
               <h5 class="text-center">每位孩子都会将会获得一份为其量身订造的学习计划，针对性的纠正成长过程中的问题。</h5>
-            </div>
-
-            <div class="col-lg-7">
-              <img class="img-fluid" src="../../assets/StudyPlan.png" alt />
             </div>
           </div>
         </div>
@@ -149,15 +146,15 @@
       <div class="driver_line"></div>
 
       <div class="text-center">
-          <div class="section-spacing">
-              <div class="container">
-                  <div class="row align-items-center">
-                      <div class="col-lg-12">
-                          <img src="../../assets/suibian.png" alt="">
-                      </div>
-                  </div>
+        <div class="section-spacing">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-12">
+                <img src="../../assets/suibian.png" alt />
               </div>
+            </div>
           </div>
+        </div>
       </div>
 
       <div class="driver_line"></div>
@@ -188,7 +185,7 @@ export default {
 .driver_line {
   width: 200px;
   border-bottom: 2px solid #32a7b8;
-  margin: 4rem auto;
+  margin: 5rem auto;
 }
 .items {
   background-color: #32a7b8;
