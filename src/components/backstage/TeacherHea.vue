@@ -3,7 +3,7 @@
     <el-row :gutter="20" class="row">
       <el-col :span="3">
         <div class="logo">
-          <img src="../../assets/logo.png" />
+          <img src="../../assets/images/user/logo.png" />
         </div>
       </el-col>
       <el-col :span="5">
@@ -42,7 +42,7 @@
 
 <script>
 export default {
-  name: "Header",
+  name: "TeaHeader",
   data() {
     return {
       search: "",

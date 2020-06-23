@@ -3,6 +3,15 @@
     <nav class="navbar navbar-expand-lg header-area">
       <a class="navbar-brand" href="/">Upower</a>
 
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="navbar-collapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
       <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
@@ -15,10 +24,10 @@
             <a class="nav-link" href>课程</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href>登录</a>
+            <a class="nav-link" href="/login/log-form">登录</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href>注册</a>
+            <a class="nav-link" href="/login/reg-form">注册</a>
           </li>
         </ul>
       </div>
@@ -40,57 +49,17 @@ export default {
 };
 </script>
 <style lang="less">
-.navbar {
-  background-color: #32a7b8;
-  padding: 20px 25px;
-}
-.navbar-brand,
-.nav-item a {
-  color: white;
-}
-.navbar a:hover {
-  color: white;
-}
-.navbar-fixed-top {
-  position: fixed;
-  width: 100%;
-  height: 80px;
-  
-  z-index: 1000;
-   animation: NavColorIn 1s ease-in-out 0s 1 alternate forwards;
-}
-.btn-purple {
-  background-color: purple;
-  animation: NavBtnColorIn 1s ease-in-out 0s 1 alternate forwards;;
-}
-@keyframes NavColorIn {
-  0%{
-    background-color:#32a7b8;
-    height: 80px;
-  }
-  100%{
-    background-color: #313131;
-    height: 60px;
-  }
-}
-@keyframes NavBtnColorIn {
-  0%{
-    background-color:#32a7b8;
-  }
-  100%{
-    background-color: purple;
-  }
-}
+@import "./NavBar.less";
 </style>
 
 <script type="text/javascript">
-$(document).scroll(function() {
+$(document).scroll( () => {
   if ($(document).scrollTop() >= 1) {
-    $(".header-area").addClass("navbar-fixed-top");
+    $(".header-area").addClass("fixed-top navbar-fixed-color");
     $(".header-area .demo").addClass("btn btn-purple");
     $(".header-area .demo").removeClass("nav-link");
   } else {
-    $(".header-area").removeClass("navbar-fixed-top");
+    $(".header-area").removeClass("fixed-top navbar-fixed-color");
     $(".header-area .demo").removeClass("btn btn-purple");
     $(".header-area .demo").addClass("nav-link");
   }

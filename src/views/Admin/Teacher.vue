@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-header class="Header">
-      <Header></Header>
+      <TeaHeader></TeaHeader>
     </el-header>
     <el-main>
       <router-view></router-view>
@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import Header from "../../components/backstage/Header";
+import Header from "../../components/backstage/TeacherHea";
 export default {
   components: {
-    Header
+    TeaHeader
   },
   props: {},
   data() {

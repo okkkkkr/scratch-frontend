@@ -1,0 +1,121 @@
+.contact-us {
+  position: fixed;
+  top: 830px;
+  left: 1750px;
+  animation: Wave 3s ease-in-out infinite;
+}
+
+.driver_line {
+  width: 200px;
+  border-bottom: 2px solid #32a7b8;
+  margin: 5rem auto;
+}
+
+.items {
+  background-color: #32a7b8;
+}
+
+.slides,
+.slides h1,
+.slides h5,
+.slides a {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.slides h1:hover,
+.slides h5:hover {
+  cursor: default;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+.large-button {
+  background-color: #f1723b;
+  width: 200px;
+  height: 60px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.large-button:hover {
+  animation: BtnColorChange 3s linear infinite;
+}
+
+.large-button a:hover {
+  text-decoration: none;
+}
+
+.large-button font {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.banner-area li {
+  list-style: none;
+}
+
+.banner-area h5 {
+  letter-spacing: 15px;
+}
+
+@keyframes Wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-30deg);
+  }
+
+  75% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes BtnColorChange {
+  0% {
+    background-color: #f1723b;
+  }
+
+  50% {
+    background-color: #fa9536;
+  }
+
+  100% {
+    background-color: #f1723b;
+  }
+}
+
+.slogan-area a:hover {
+  animation: colorChange 3s linear infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #32a7b8;
+  }
+
+  50% {
+    color: #268185;
+  }
+
+  100% {
+    color: #32a7b8;
+  }
+}

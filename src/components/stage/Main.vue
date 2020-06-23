@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="contact-us">
       <a href>
-        <img src="../../assets/mail.png" />
+        <img src="../../assets/images/user/mail.png" />
       </a>
     </div>
     <div class="items">
@@ -11,17 +11,17 @@
           <br />
           <br />
           <ul class="slides clearfix">
-            <li style="list-style:none;">
+            <li>
               <h1>Upower</h1>
               <br />
-              <h5>一个基于scratch的少儿编程平台</h5>
+              <h5>中国少儿智能教育平台</h5>
               <br />
               <br />
               <br />
-              <div class="large-button">
+              <div>
                 <button type="button" class="btn btn-default large-button">
-                  <a href>
-                    <font style="font-size:24px;">免费开始</font>
+                  <a href="/stuPage/mainPage">
+                    <font>免费开始</font>
                   </a>
                 </button>
               </div>
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="banner-btm-img">
-        <img src="../../assets/jackets.png" alt />
+        <img src="../../assets/images/user/jackets.png" alt />
       </div>
     </div>
 
@@ -73,7 +73,7 @@
             </div>
 
             <div class="col-lg-7">
-              <img class="img-fluid" src="../../assets/OnlineEdit.png" alt />
+              <img class="img-fluid" src="../../assets/images/user/OnlineEdit.png" alt />
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@
         <div class="container teacher-resoure">
           <div class="row align-items-center">
             <div class="col-lg-7">
-              <img class="img-fluid" src="../../assets/TeacherResoure.png" alt />
+              <img class="img-fluid" src="../../assets/images/user/TeacherResoure.png" alt />
             </div>
             <div class="col-lg-5">
               <h3>师资力量</h3>
@@ -104,7 +104,7 @@
             </div>
 
             <div class="col-lg-7">
-              <img class="img-fluid" src="../../assets/FunnyGame.png" alt />
+              <img class="img-fluid" src="../../assets/images/user/FunnyGame.png" alt />
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@
             
 
             <div class="col-lg-7">
-              <img class="img-fluid" src="../../assets/StudyPlan.png" alt />
+              <img class="img-fluid" src="../../assets/images/user/StudyPlan.png" alt />
             </div>
             <div class="col-lg-5">
               <h3>学习计划</h3>
@@ -138,7 +138,7 @@
           </div>
 
           <div class="col-lg-7">
-            <img class="img-fluid" src="../../assets/Report.png" alt />
+            <img class="img-fluid" src="../../assets/images/user/Report.png" alt />
           </div>
         </div>
       </div>
@@ -150,7 +150,7 @@
           <div class="container">
             <div class="row align-items-center">
               <div class="col-lg-12">
-                <img src="../../assets/suibian.png" alt />
+                <img src="../../assets/images/user/suibian.png" alt />
               </div>
             </div>
           </div>
@@ -176,89 +176,5 @@ export default {
 };
 </script>
 <style lang="less">
-.contact-us {
-  position: fixed;
-  top: 830px;
-  left: 1750px;
-  animation: Wave 3s ease-in-out infinite;
-}
-.driver_line {
-  width: 200px;
-  border-bottom: 2px solid #32a7b8;
-  margin: 5rem auto;
-}
-.items {
-  background-color: #32a7b8;
-}
-.slides,
-.slides h1,
-.slides h5,
-.slides a {
-  color: white;
-  margin: 0;
-  padding: 0;
-}
-.slides h1:hover,
-.slides h5:hover {
-  cursor: default;
-}
-h1 {
-  font-size: 72px;
-}
-h2 {
-  font-size: 60px;
-}
-h5 {
-  font-size: 24px;
-}
-.large-button {
-  background-color: #f1723b;
-  width: 200px;
-  height: 60px;
-  border-radius: 5px;
-  margin: 0 auto;
-}
-.large-button:hover {
-  animation: BtnColorChange 3s linear infinite;
-}
-@keyframes Wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-30deg);
-  }
-
-  75% {
-    transform: rotate(30deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes BtnColorChange {
-  0% {
-    background-color: #f1723b;
-  }
-  50% {
-    background-color: #fa9536;
-  }
-  100% {
-    background-color: #f1723b;
-  }
-}
-.slogan-area a:hover {
-  animation: colorChange 3s linear infinite;
-}
-@keyframes colorChange {
-  0% {
-    color: #32a7b8;
-  }
-  50% {
-    color: #268185;
-  }
-  100% {
-    color: #32a7b8;
-  }
-}
+  @import "./Main.less";
 </style>

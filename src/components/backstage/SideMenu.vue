@@ -3,12 +3,12 @@
       <div :class="[rotate ? 'openWrapper opensiderWrapper' : 'closeWrapper opensiderWrapper']">
       <img
         :class="[rotate ? 'opensider sider' : 'closesider sider']"
-        src="../../assets/bars-close.png"
+        src="../../assets/images/user/bars-close.png"
         @click="changeFlag"
       />
     </div> 
     <el-menu
-      default-active="1-4-1"
+      default-active="1-1"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
@@ -18,24 +18,34 @@
     >
       <el-submenu index="1">
         <template slot="title">
-          <i class="el-icon-location"></i>
-          <span slot="title">教师管理</span>
+          <i class="el-icon-user-solid"></i>
+          <span slot="title">用户管理</span>
         </template>
         <el-menu-item-group>
           <span slot="title">管理内容</span>
-          <el-menu-item index="1-1">教室上课情况</el-menu-item>
-          <el-menu-item index="1-2">教学动态</el-menu-item>
+          <el-menu-item index="1-1">
+            <router-link to="/admin/StuInfo">学员管理</router-link>
+          </el-menu-item>
+          <el-menu-item index="1-2">
+            <router-link to="/admin/TeaInfo">教师管理</router-link>
+          </el-menu-item>
+          <el-menu-item index="1-3">
+            <router-link to="/admin/AdminInfo">管理员管理</router-link>
+          </el-menu-item>
         </el-menu-item-group>
-        <el-submenu index="1-4">
+
+        <!-- 导航栏子选项卡 -->
+        <!-- <el-submenu index="1-4">
           <span slot="title">选项4</span>
           <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
+        </el-submenu> -->
+
       </el-submenu>
       <el-menu-item index="2">
         <i class="el-icon-menu"></i>
         <span slot="title">导航二</span>
       </el-menu-item>
-      <el-menu-item index="3" disabled>
+      <el-menu-item index="3">
         <i class="el-icon-document"></i>
         <span slot="title">导航三</span>
       </el-menu-item>
