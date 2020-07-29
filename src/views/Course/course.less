@@ -1,0 +1,150 @@
+@media screen and(min-width:1280) {
+    .container {
+        max-width: 1180px;
+    }
+}
+
+.activeType {
+    margin-top: 50px;
+
+    img {
+        height: 120px;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    h5 {
+        margin-top: 10px;
+    }
+}
+
+.course-nav {
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    .nav-head {
+        padding-bottom: 10px;
+        border-bottom: .5px solid #d6d6d6;
+    }
+
+    .navBar {
+        margin-top: 20px;
+
+        .courseType-nav {
+            &:hover {
+                cursor: pointer;
+
+                .el-breadcrumb__inner {
+                    color: #007bff;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .title {
+        float: left;
+        line-height: 40px;
+
+        h4 {
+            display: inline;
+        }
+    }
+
+    .icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .search {
+        width: 200px;
+        float: right;
+    }
+
+    .courseType {
+        display: inline;
+        margin-left: 10px;
+
+
+
+        span {
+            margin-left: 10px;
+            display: inline-block;
+
+            &:hover {
+                color: #fec63c;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+[class*="el-breadcrumb"] {
+    cursor: pointer !important;
+}
+
+.courseCont {
+    margin-bottom: 10px;
+
+    // [class*="col-"] {
+    //     margin-right: 35px !important;
+    //     margin-left: 7px !important;
+    // }
+
+    .Instruc,
+    .visit {
+        padding-left: 10px;
+        text-align: left;
+    }
+
+    .Instruc {
+        margin: 10px 0;
+        font-weight: bold;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .visit {
+        font-size: 15px;
+        color: #d6d6d6;
+
+        .scan,
+        .like {
+            &:hover {
+                cursor: pointer;
+                color: #fec63c;
+            }
+        }
+
+    }
+
+    .authorName {
+        margin-top: 5px;
+        padding: 5px 0 5px 5px;
+        border-top: 1px solid #f3f3f3;
+        color: #a5a5a5;
+        text-align: left;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .worksWrapper {
+        width: 208px;
+        background-color: #ffffff;
+        margin-bottom: 50px;
+        margin-right: 20px;
+    }
+}
+
+.block {
+    margin-bottom: 40px;
+
+    button,
+    li {
+        background-color: transparent !important;
+    }
+}

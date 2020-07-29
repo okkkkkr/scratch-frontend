@@ -1,0 +1,43 @@
+.cont {
+    position: relative;
+    margin-top: 20px;
+    border: 1px solid #f1723b;
+    height: 168px;
+    border-radius: 5px;
+}
+
+.worksInfo {
+    height: 80px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0 0 10px;
+    color: white;
+    opacity: 0;
+    background-color: #808080;
+    position: absolute;
+    top: 88px;
+    transition: all .5s;
+}
+
+.cont:hover {
+    .worksInfo {
+        opacity: 0.8;
+    }
+}
+
+.block{
+    margin: 10px 0;
+}
+
+.manager{
+    margin-top: 10px;
+}
+
+.charge{
+    width: 100%;
+    text-align: right;
+    margin-top: 5px;
+    &:hover{
+        color: #409eff;
+    }
+}

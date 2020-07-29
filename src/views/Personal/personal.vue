@@ -11,7 +11,7 @@
             <div class="row">
               <div class="col-sm-1">
                 <div class="head-img">
-                  <img :src="`http://120.24.230.119:8089/${this.userInfo.icon}`" alt />
+                  <img :src="`http://39.108.222.204:8089/common/static/${this.userInfo.icon}`" alt />
                 </div>
               </div>
               <div class="col-sm-9 personal-pro">
@@ -58,7 +58,10 @@
                 @select="handleSelect"
               >
                 <el-menu-item index="1">已购课程</el-menu-item>
-                <el-menu-item index="2">我的作品</el-menu-item>
+                <el-menu-item index="2">
+                  <router-link to="/stuPage/personal/myWorks">我的作品</router-link>
+                </el-menu-item>
+
                 <el-menu-item index="3">我的论坛</el-menu-item>
                 <el-menu-item index="4">已报名比赛</el-menu-item>
                 <el-menu-item index="5">待定</el-menu-item>
@@ -72,13 +75,9 @@
         <div class="container">
           <div class="row">
             <!-- 左侧导航显示内容 -->
-            <div class="col-md-9 showInfo">
+            <div class="left-cont col-md-9 showInfo">
               <!-- <button @click="test">测试</button> -->
-              <div class="card-body cont">这里是导航显示内容</div>
-              <div class="card-body cont">这里是导航显示内容</div>
-              <div class="card-body cont">这里是导航显示内容</div>
-              <div class="card-body cont">这里是导航显示内容</div>
-              <div class="card-body cont">这里是导航显示内容</div>
+              <router-view></router-view>
             </div>
 
             <!-- 右侧浏览记录卡片 -->
@@ -119,8 +118,8 @@ export default {
     return {
       activeIndex: "1",
       email: "",
-      sex:"",
-      level:"",
+      sex: "",
+      level: "",
       // 个人信息需要的对象
       userInfo: {}
       // myClass:{}，
@@ -136,7 +135,7 @@ export default {
     //     console.log(param);
     //     that.initData();
     //   });
-    let userId = parseInt(sessionStorage.getItem("loginId"));
+    let userId = sessionStorage.getItem("loginId");
     console.log("--------------------");
     console.log(typeof userId);
     console.log(userId);
@@ -175,11 +174,11 @@ export default {
       }
       console.log(this.level);
 
-      if(sex == 0){
+      if (sex == 0) {
         $(".sex").addClass("el-icon-female");
       }
 
-      if(sex == 1){
+      if (sex == 1) {
         $(".sex").addClass("el-icon-male");
       }
     }

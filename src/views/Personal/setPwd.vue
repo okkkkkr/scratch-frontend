@@ -95,7 +95,7 @@ export default {
   computed: {},
   methods: {
       submitForm() {
-        let loginId = Number(sessionStorage.getItem("loginId"));
+        let loginId = sessionStorage.getItem("loginId");
         this.$http
         .post(`/api/userInfo/update/${loginId}`, this.ruleForm)
         .then(res => {

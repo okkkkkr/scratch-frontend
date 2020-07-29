@@ -17,7 +17,9 @@
                   </router-link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">发现</a>
+                  <router-link to="/stuPage/discover">
+                    <a class="nav-link" href="#">发现</a>
+                  </router-link>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">工作室</a>
@@ -29,10 +31,12 @@
                   <a class="nav-link" href="#">素材</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">课程</a>
+                  <router-link to="/stuPage/course">
+                    <a class="nav-link" href="#">课程</a>
+                  </router-link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">赛事</a>
+                  <a class="nav-link" href="/Activity">活动</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">更多</a>
@@ -154,7 +158,7 @@
             <span class="create">
               <a href="#" class="create-title dropdown-troggle" data-toggle="dropdown">创作</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">源码编辑器</a>
+                <a class="dropdown-item" href="/CodeEditor">源码编辑器</a>
                 <a class="dropdown-item" href="#">海龟编辑器</a>
                 <a class="dropdown-item" href="#">代码岛</a>
               </div>
@@ -183,13 +187,13 @@ export default {
       url: "",
       LoginForm: {
         userAc: "",
-        Password: ""
+        Password: "",
       },
       RegForm: {
         userAc: "",
         Password: "",
-        Code: ""
-      }
+        Code: "",
+      },
     };
   },
   mounted() {},
@@ -227,13 +231,13 @@ export default {
       //提交登录信息
       this.$http
         .post("/api/login", this.LoginForm)
-        .then(res => {
+        .then((res) => {
           //调用方法,session保存id
           this.SaveId(res.data.loginId);
 
           this.$message({
             message: "登陆成功",
-            type: "success"
+            type: "success",
           });
           let jump = setInterval(() => {
             if (this.time > 0) {
@@ -245,7 +249,7 @@ export default {
             }
           }, 1000);
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(this.LoginForm);
           this.$message.error("登陆失败，请检查账户或密码是否正确！");
         });
@@ -255,22 +259,22 @@ export default {
       if (this.RegForm.Code != null) {
         this.$http
           .post("", this.RegForm)
-          .then(res => {
+          .then((res) => {
             //调用方法,session保存id
             this.SaveId(res.data.loginId);
             this.$message({
               message: "注册成功！",
-              type: "success"
+              type: "success",
             });
             this.$router.push({ path: "/stuPage/mainPage" });
           })
-          .catch(err => {
+          .catch((err) => {
             this.$message.error("系统繁忙，请稍后重试！");
           });
       } else {
         this.$message({
           message: "请填写验证码！",
-          type: "warning"
+          type: "warning",
         });
       }
     },
@@ -289,10 +293,10 @@ export default {
         .then(() => {
           this.show = true;
         })
-        .catch(err => {
+        .catch((err) => {
           this.$notify.error({
             title: "错误",
-            message: "系统繁忙，请稍后重试！"
+            message: "系统繁忙，请稍后重试！",
           });
         });
 
@@ -322,7 +326,7 @@ export default {
       //session存储登陆的userAc
       sessionStorage.setItem("loginId", userId);
       console.log("This is loginId from Header ========>" + userId);
-    }
+    },
   },
 
   created() {},
@@ -330,24 +334,25 @@ export default {
     //页面挂载前初始化用户信息，存储再客户端session
     this.$http
       .get("/api/loginUser")
-      .then(res => {
+      .then((res) => {
         //存储登录ID
         console.log(res);
         this.SaveId(res.data.data.id);
         this.loginOrNot = true;
         // sessionStorage.setItem("userInfo", this.userInfo)
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
 
-    let loginId = Number(sessionStorage.getItem("loginId"));
-    this.$http.get(`/api/userInfo/${loginId}`).then(res => {
+    let loginId = sessionStorage.getItem("loginId");
+    this.$http.get(`/api/userInfo/${loginId}`).then((res) => {
       console.log("UserInfo");
-      this.iconURL = `http://120.24.230.119:8089/${res.data.data.icon}`;
+      console.log(res);
+      this.iconURL = `http://39.108.222.204:8089/common/static/${res.data.data.icon}`;
       this.userName = res.data.data.name;
     });
-  }
+  },
 };
 </script>
 <style lang="less">

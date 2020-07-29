@@ -6,7 +6,6 @@ import router from './router'
 import $ from "jquery";
 import Element from 'element-ui'
 
-
 import 'less'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min'

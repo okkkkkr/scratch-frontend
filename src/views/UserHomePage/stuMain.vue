@@ -23,7 +23,7 @@
                   <div class="media">
                     <img
                       style="width:100%;height:100%;"
-                      :src="`http://120.24.230.119:8089/${item.banner}`"
+                      :src="`http://39.108.222.204:8089/common/static/${item.banner}`"
                     />
                   </div>
                   <div class="introduct">
@@ -42,12 +42,12 @@
       <!-- 热门活动 -->
       <div class="cont-title container">
         <div class="row">
-          <div class="cont col-sm-6">
+          <div class="cont-nav col-sm-6">
             <img class="title-logo" src="../../assets/images/homepage/active.png" alt />
             <font class="title" id="hot">热门活动</font>
           </div>
           <div class="more col-sm-6">
-            <a href class="more-cont">更多</a>
+            <a href class="more-cont">更多></a>
           </div>
         </div>
       </div>
@@ -55,8 +55,8 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-3" v-for="item in activeList" :key="item.title">
-            <div class="cont1">
-              <img style="width:100%;height:100%;" :src="`http://120.24.230.119:8089/${item.banner}`" alt="">
+            <div class="cont">
+              <img style="width:100%;height:100%;" :src="`http://39.108.222.204:8089/common/static/${item.banner}`" alt="">
               <div class="worksInfo">
                 <h5>{{ item.title }}</h5>
                 <p>{{ item.introduction }}</p>
@@ -69,45 +69,27 @@
       <!-- 新作精选 -->
       <div class="cont-title container">
         <div class="row">
-          <div class="cont col-sm-6">
+          <div class="cont-nav col-sm-6">
             <img class="title-logo" src="../../assets/images/homepage/newWorks.png" alt />
             <font class="title" id="selected">新作精选</font>
           </div>
-          <div class="more col-sm-6"></div>
+          <div class="more col-sm-6">
+            <a href class="more-cont">更多></a>
+          </div>
         </div>
       </div>
 
-      <div class="container">
+      <!-- 新作精品作品内容 -->
+    <div class="container">
         <div class="row">
-          <div class="col-sm-five">
-            <div class="cont1"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont2"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont3"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont4"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont5"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont6"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont7"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont8"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont9"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont10"></div>
+          <div class="col-sm-five" v-for="item in activeList" :key="item.title">
+            <div class="cont">
+              <img style="width:100%;height:100%;" :src="`http://39.108.222.204:8089/common/static/${item.banner}`" alt="">
+              <div class="worksInfo">
+                <h5>{{ item.title }}</h5>
+                <p>{{ item.introduction }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -116,99 +98,57 @@
         <img src="../../assets/images/homepage/introdution.png" alt />
       </div>
 
-      <!-- 各类游戏 -->
+      <!-- 动作游戏 -->
       <div class="cont-title container">
         <div class="row">
-          <div class="cont col-sm-6">
+          <div class="cont-nav col-sm-6">
             <img class="title-logo" src="../../assets/images/homepage/active.png" alt />
             <font class="title" id="move">动作游戏</font>
           </div>
           <div class="more col-sm-6">
-            <a href class="more-cont">下一页></a>
+            <a href class="more-cont">更多></a>
           </div>
         </div>
       </div>
 
+      <!-- 动作游戏内容展示 -->
       <div class="container">
         <div class="row">
-          <div class="col-sm-five">
-            <div class="cont1"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont2"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont3"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont4"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont5"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont6"></div>
-          </div>
-
-          <div class="col-sm-five">
-            <div class="cont7"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont8"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont9"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont10"></div>
+          <div class="col-sm-five" v-for="item in actionGameList" :key="item.title">
+            <div class="cont">
+              <img style="width:100%;height:100%;" :src="`http://39.108.222.204:8089/common/static/${item.banner}`" alt="">
+              <div class="worksInfo">
+                <h5>{{ item.title }}</h5>
+                <p>{{ item.introduction }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="cont-title container">
         <div class="row">
-          <div class="cont col-sm-6">
+          <div class="cont-nav col-sm-6">
             <img class="title-logo" src="../../assets/images/homepage/active.png" alt />
             <font class="title" id="shot">射击游戏</font>
           </div>
+
           <div class="more col-sm-6">
-            <a href class="more-cont">下一页></a>
+            <a href class="more-cont">更多></a>
           </div>
         </div>
       </div>
 
       <div class="container">
         <div class="row">
-          <div class="col-sm-five">
-            <div class="cont1"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont2"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont3"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont4"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont5"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont6"></div>
-          </div>
-
-          <div class="col-sm-five">
-            <div class="cont7"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont8"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont9"></div>
-          </div>
-          <div class="col-sm-five">
-            <div class="cont10"></div>
+          <div class="col-sm-five" v-for="item in shootingGameList" :key="item.title">
+            <div class="cont">
+              <img style="width:100%;height:100%;" :src="`http://39.108.222.204:8089/common/static/${item.banner}`" alt="">
+              <div class="worksInfo">
+                <h5>{{ item.title }}</h5>
+                <p>{{ item.introduction }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -265,7 +205,10 @@ export default {
     return {
       tutorialList: [],
       activeList: [],
-      course: []
+      course: [],
+      newPortfolioList:[],
+      actionGameList:[],
+      shootingGameList:[]
     };
   },
   watch: {},
@@ -280,9 +223,10 @@ export default {
         console.log("There are data from content ========>");
         this.tutorialList = res.data.data.tutorialList;
         this.activeList = res.data.data.activeList;
+        this.newPortfolioList = res.data.data.newPortfolioList;
+        this.actionGameList = res.data.data.actionGameList;
+        this.shootingGameList = res.data.data.shootingGameList;
         console.log(res);
-        console.log(this.tutorialList);
-        console.log(this.activeList);
       })
       .catch(err => {
         console.log(err);

@@ -75,11 +75,25 @@ export default new Router({
         {
           path: 'mainPage',
           name: 'mainPage',
-          component: () => import('@/views/StuHomePage/stuMain.vue'),
+          component: () => import('@/views/UserHomePage/stuMain.vue'),
           meta: {
             name: "viewport",
             content: "width=device-width, initial-scale=1"
           },
+        },
+        {
+          path: 'discover',
+          name: 'discover',
+          component: () => import('@/views/Discover(works)/discover.vue'),
+          meta: {
+            name: "viewport",
+            content: "width=device-width, initial-scale=1"
+          },
+        },
+        {
+          path:"course",
+          name:"course",
+          component: () => import("@/views/Course/course.vue")
         },
         {
           path: 'personal',
@@ -89,6 +103,28 @@ export default new Router({
             name: "viewport",
             content: "width=device-width, initial-scale=1"
           },
+          children:[
+            {
+              path:'myWorks',
+              name:'myWorks',
+              component: () => import('@/views/Personal/MyWorks/myWorks.vue'),
+              meta:{
+                name:"viewport",
+                content:"width=device-width, initial-scale=1"
+              }
+            },
+          ]
+        },
+        //课程详情页面
+        {
+          path:"/courseInfo",
+          name:"courseInfo",
+          component: () => import("@/views/Course/courseInfo.vue")
+        },
+        {
+          path:"/fill-info",
+          name:"fill-info",
+          component: () => import("@/views/Course/fill-info.vue")
         },
         {
           path: 'perInfo',
@@ -121,6 +157,17 @@ export default new Router({
         }
       ]
     },
+    //活动页
+    {
+      path:'/activity',
+      name:'activity',
+      component: () => import('@/views/Activity/activity.vue'),
+      meta: {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
+      },
+    },
+    
     //教师主页
     {
       path:"/teacher",
@@ -140,7 +187,7 @@ export default new Router({
       children: [
         //教师管理
         {
-          path: 'TeaInfo',
+          path: '/TeaInfo',
           name: 'TeaInfo',
           component: () => import('@/views/Admin/UserCharge/TeaCharge.vue'),
           meta: {
@@ -168,7 +215,7 @@ export default new Router({
 
         //学生管理
         {
-          path: 'StuInfo',
+          path: '/StuInfo',
           name: 'StuInfo',
           component: () => import('@/views/Admin/UserCharge/stuCharge.vue'),
           meta: {
@@ -189,7 +236,7 @@ export default new Router({
 
         //管理员管理
         {
-          path: 'AdminInfo',
+          path: '/AdminInfo',
           name: 'AdminInfo',
           component: () => import('@/views/Admin/UserCharge/AdminCharge.vue'),
           meta: {
@@ -210,8 +257,15 @@ export default new Router({
         //   path: 'VisitData',
         //   name: 'VisitData',
         //   component: () => import('@/views/VisitData/visit-data.vue')
-        // }
+        // },
       ]
+    },
+    //源码编辑器
+    {
+      path:"/CodeEditor",
+      name:"CodeEditor",
+      component: () => import('@/views/Editor/CodeEditor.vue'),
     }
-  ]
+  ],
+  
 })

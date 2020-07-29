@@ -80,12 +80,12 @@
     margin-top: 50px;
 }
 
-.cont,
+.cont-nav,
 .more {
     line-height: 52px;
 }
 
-.cont {
+.cont-nav {
     text-align: left;
     border: none;
 }
@@ -114,8 +114,13 @@
     color: #201f1a;
 }
 
-.cont1 {
+.cont {
     position: relative;
+    &:hover {
+        .worksInfo {
+            opacity: 0.8;
+        }
+    }
 }
 
 .worksInfo {
@@ -131,35 +136,15 @@
     transition: all .5s;
 }
 
-.cont1:hover {
-    .worksInfo {
-        opacity: 0.8;
-    }
-}
+
 
 //content 内容栏
-.cont1,
-.cont2,
-.cont3,
-.cont4,
-.cont5,
-.cont6,
-.cont7,
-.cont8,
-.cont9,
-.cont10 {
+.cont {
     margin-top: 20px;
     border: 1px solid #f1723b;
     height: 168px;
     border-radius: 5px;
-}
-
-.cont6,
-.cont7,
-.cont8,
-.cont9,
-.cont10 {
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .introdution {

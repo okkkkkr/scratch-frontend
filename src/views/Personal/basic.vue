@@ -8,7 +8,7 @@
         <div class="row">
           <div class="col-sm-1">
             <div class="head-img">
-              <img :src="`http://120.24.230.119:8089/${userInfo.icon}`" alt />
+              <img :src="`http://39.108.222.204:8089/common/static/${userInfo.icon}`" alt />
             </div>
           </div>
           <div class="col-sm-11 personal-pro disabledWrapper">
@@ -309,7 +309,7 @@ export default {
     },
 
     submitForm() {
-      let loginId = Number(sessionStorage.getItem("loginId"));
+      let loginId = sessionStorage.getItem("loginId");
       console.log(object);
       this.$http
         .post(`/api/userInfo/update/${loginId}`, this.ruleForm)
@@ -332,7 +332,7 @@ export default {
 
   created() {},
   mounted() {
-    let userId = parseInt(sessionStorage.getItem("loginId"));
+    let userId = sessionStorage.getItem("loginId");
     this.userID = userId;
     this.$http
       .get(`/api/userInfo/${userId}`)
